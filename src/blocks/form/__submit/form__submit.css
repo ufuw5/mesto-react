@@ -1,0 +1,10 @@
+.form__submit {
+  width: 83.25%;
+  margin: 48px 0 36.5px;
+  padding: 16px 0;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 2px;
+  cursor: pointer;
+  display: grid;
+}

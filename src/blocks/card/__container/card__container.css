@@ -1,0 +1,12 @@
+.card__container {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  grid-template-rows: 1fr max-content;
+  grid-template-areas:
+    "image image"
+    "title like"
+    "title score";
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
