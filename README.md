@@ -2,7 +2,7 @@
 
 ### Обзор
 
-Ссылка: [Mesto](https://ufuw5.github.io/mesto-react/public/index.html)
+Ссылка: [Mesto](https://ufuw5.github.io/mesto-react/index.html)
 
 Проект является частью обучения в Яндекс.Практикуме и создан в качестве самостоятельной работы для проверки усвоения учебного материала.
 
