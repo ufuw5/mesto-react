@@ -9,7 +9,7 @@ function App() {
   const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = React.useState(false);
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = React.useState(false);
   const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = React.useState(false);
-  const [selectedCard, setSelectedCard] = React.useState({});
+  const [selectedCard, setSelectedCard] = React.useState(null);
 
   function handleEditAvatarClick() {
     setIsEditAvatarPopupOpen(true);
@@ -24,14 +24,14 @@ function App() {
   }
 
   function handleCardClick(card) {
-    setSelectedCard({ ...card, isOpen: true });
+    setSelectedCard(card);
   }
 
   function closeAllPopups() {
     setIsEditAvatarPopupOpen(false);
     setIsEditProfilePopupOpen(false);
     setIsAddPlacePopupOpen(false);
-    setSelectedCard({});
+    setSelectedCard(null);
   }
 
   return (
@@ -87,10 +87,9 @@ function App() {
         title='Вы уверены?'
         submitText='Да'
         submitWaitText='Удаление...' />
-      <ImagePopup
+      {selectedCard && <ImagePopup
         card={selectedCard}
-        isOpen={selectedCard.isOpen}
-        onClose={closeAllPopups} />
+        onClose={closeAllPopups} />}
     </div>
   );
 }

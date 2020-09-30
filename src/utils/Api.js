@@ -1,3 +1,6 @@
+const url = 'https://mesto.nomoreparties.co/v1/cohort-15';
+const token = 'c791e527-e4b7-4175-8eba-6e62f06389ee';
+
 class Api {
   constructor(options) {
     this.options = options;
@@ -71,9 +74,9 @@ class Api {
 }
 
 const api = new Api({
-  baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-15',
+  baseUrl: url,
   headers: {
-    authorization: 'c791e527-e4b7-4175-8eba-6e62f06389ee',
+    authorization: token,
     'Content-Type': 'application/json'
   }
 });
