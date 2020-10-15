@@ -35,17 +35,10 @@ class Api {
     });
   }
 
-  setLike(id) {
+  changeLikeCardStatus(id, isLiked) {
     return this._sendQuery(`${this.options.baseUrl}/cards/likes/${id}`, {
-      method: 'PUT',
+      method: isLiked ? 'PUT' : 'DELETE',
       headers: this.options.headers,
-    });
-  }
-
-  deleteLike(id) {
-    return this._sendQuery(`${this.options.baseUrl}/cards/likes/${id}`, {
-      method: 'DELETE',
-      headers: this.options.headers
     });
   }
 
