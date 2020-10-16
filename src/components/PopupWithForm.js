@@ -1,6 +1,12 @@
 import React from 'react';
 
 function PopupWithForm({ name, title, submitText, submitWaitText, isOpen, onSubmit, onClose, children }) {
+  function handleSubmit(evt) {
+    evt.preventDefault();
+    onSubmit();
+    onClose();
+  }
+
   return (
     <section
       id={`${name}Popup`}
@@ -9,7 +15,7 @@ function PopupWithForm({ name, title, submitText, submitWaitText, isOpen, onSubm
         action="#"
         name={name}
         className="form"
-        onSubmit={onSubmit}
+        onSubmit={handleSubmit}
         noValidate>
         <button
           type="reset"
@@ -20,7 +26,7 @@ function PopupWithForm({ name, title, submitText, submitWaitText, isOpen, onSubm
         {children}
         <button
           type="submit"
-          className="form__submit form__submit_nonactive link-translucence">
+          className="form__submit form__submit_active link-translucence">
           <span
             id="submitText"
             className="form__submit-text">{submitText}</span>

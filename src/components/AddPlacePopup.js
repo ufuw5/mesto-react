@@ -13,8 +13,7 @@ function AddPlacePopup({ isOpen, onAdd, onClose }) {
     setLink(evt.target.value);
   }
 
-  function handleSubmit(evt) {
-    evt.preventDefault();
+  function handleSubmit() {
     onAdd({ name, link });
   }
 

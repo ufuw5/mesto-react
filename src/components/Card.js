@@ -24,11 +24,19 @@ function Card({ card, onClick, onLikeClick, onCardDelete }) {
     <li className="card">
       <div className="card__container">
         <div className="card__image-container">
-          <img className="card__image" src={card.link} onClick={handleClick} />
+          <img
+            className="card__image"
+            src={card.link}
+            alt={card.name}
+            onClick={handleClick} />
         </div>
-        <button className={removeButtonClassName} onClick={handleDeleteClick} />
+        <button
+          className={removeButtonClassName}
+          onClick={handleDeleteClick} />
         <h3 className="card__title">{card.name}</h3>
-        <button className={cardLikeButtonClassName} onClick={handleLikeClick} />
+        <button
+          className={cardLikeButtonClassName}
+          onClick={handleLikeClick} />
         <p className="card__like-score">{card.likes.length}</p>
       </div>
     </li>
